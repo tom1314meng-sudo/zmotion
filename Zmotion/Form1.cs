@@ -1,4 +1,5 @@
-﻿using Sunny.UI;
+﻿using LogProject;
+using Sunny.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,9 +41,11 @@ namespace Zmotion
             AppResultHelper<bool> appResultHelper = parentMotion.Open(uiComboBox1.Text);
             if (!appResultHelper.isSuccessful)
             {
+                LogServer.Instance.WriteLog(appResultHelper.message);
                 this.ShowErrorTip(appResultHelper.message);
                 return;
             }
+            LogServer.Instance.WriteLog("连接成功");
             this.ShowSuccessTip(appResultHelper.message);
             //成功修改控件为绿色
             toolStripStatusLabel2.BackColor = Color.Green;

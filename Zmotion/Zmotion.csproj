@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LogProject">
+      <HintPath>..\LogProject\bin\Debug\LogProject.dll</HintPath>
+    </Reference>
     <Reference Include="SunnyUI, Version=3.9.8.0, Culture=neutral, PublicKeyToken=3f4ebed4237db5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\SunnyUI.3.9.8\lib\net472\SunnyUI.dll</HintPath>
     </Reference>
